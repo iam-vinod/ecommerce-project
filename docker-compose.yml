@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      DB_HOST: "your-rds-instance.amazonaws.com"
+      DB_USER: "admin"
+      DB_PASSWORD: "password"
+      DB_NAME: "ecommerce_db"
